@@ -1,2 +1,2 @@
 #!/bin/bash
-ss -tuna -p
+sudo ss -tuna -p
