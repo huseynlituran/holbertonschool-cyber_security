@@ -1,0 +1,4 @@
+#!/bin/bash
+NEW_HOST=$1
+TARGET_URL=$2
+FORM_DATA=$3
