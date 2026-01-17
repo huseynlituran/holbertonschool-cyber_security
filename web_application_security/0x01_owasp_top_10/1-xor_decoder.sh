@@ -4,11 +4,10 @@
 
 hash="${1#{xor\}}"
 
-decoded=$(echo "$hash" | base64 -d | xxd -p | fold -w2)
+decoded=$(echo "$hash" | base64 -d | od -An -tu1)
 
-for hex in $decoded
+for dec in $decoded
 do
-    dec=$((16#$hex))
     xored=$((dec ^ 95))
     printf "\\$(printf '%03o' "$xored")"
 done
